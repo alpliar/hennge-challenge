@@ -31,7 +31,6 @@
 
     const getWithDateClass = () => {
 
-        console.log(displayedDate)
         let cssClass = ''
         if(displayedDate.length < 6) {
             cssClass = 'with-small-date'
@@ -41,7 +40,6 @@
             cssClass = 'with-large-date'
         }
 
-        console.log(hasAttachment)
         if(hasAttachment) {
             cssClass += ' with-attachment'
         }

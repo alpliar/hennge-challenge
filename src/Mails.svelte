@@ -125,8 +125,8 @@
     }
 
     const handleFilter = (filter) => {
-        console.log("filter.detail")
-        console.log(filter.detail)
+        // console.log("filter.detail")
+        // console.log(filter.detail)
         filteredMails = filter.detail
     }
 
