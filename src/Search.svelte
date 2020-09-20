@@ -11,14 +11,23 @@
     let userInput = ''
 
     let dateStartChosen = true
-    let dateStartSelected = new Date('2019/12/31')
+    let dateStartSelected = new Date('2019/12/31 00:00:00')
     let dateStartFormatted
     let dateEndChosen = true
-    let dateEndSelected = new Date('2020/01/03')
+    let dateEndSelected = new Date('2020/01/03 23:59:59')
     let dateEndFormatted
 
     //TODO: 
     const handleSearch = () => {
+        dateStartSelected.setHours(0)
+        dateStartSelected.setMinutes(0)
+        dateStartSelected.setSeconds(0)
+        dateStartSelected.setMilliseconds(0)
+        dateEndSelected.setHours(23)
+        dateEndSelected.setMinutes(59)
+        dateEndSelected.setSeconds(59)
+        dateEndSelected.setMilliseconds(999)
+        
         const filteredMails = mails.filter(mail => new Date(mail.date) >= dateStartSelected && new Date(mail.date) <= dateEndSelected)
         resultsCount = filteredMails.length
         dispatch('filter', filteredMails)
