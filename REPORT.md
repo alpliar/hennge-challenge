@@ -2,6 +2,7 @@
 
 ### Why Svelte ?
 I have spent some times during COVID-19 lockdown working on Svelte.js, but nothing work-related / serious
+
 I have enjoyed the time spent to explore this technology, and was impressed by how little code it takes to write reliable and reactive interfaces
 
 ## Mission 1: Design the UI using the given images
@@ -42,14 +43,16 @@ Identified features :
                 * display full date for older mails
             * attachment
             * decorative arrow
-    * hi-res screens specific parts
-        * Sorting options
-            * fixed width columns
-            * hide separators
-        * Search results
-            * from / to container
-                * hide from / to icon
-                * remove bold on 'from'
-            * date
-                * text in bold
-                * hide decorative arrow
+* hi-res screens specific parts
+    * header
+        * no adjustments
+    * Sorting options
+        * fixed width columns
+        * hide separators
+    * Search results
+        * from / to container
+            * hide from / to icon
+            * remove bold on 'from'
+        * date
+            * text in bold
+            * hide decorative arrow
