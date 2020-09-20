@@ -11,7 +11,7 @@
     let userInput = ''
 
     const defaultStartDate = '2019/12/31'
-    const defaultEndDate = '2020/01/03'
+    const defaultEndDate = '2020/1/3'
 
     let dateStartChosen = false
     let dateStartSelected = new Date(defaultStartDate + ' 00:00:00')
@@ -22,6 +22,8 @@
 
     //TODO: 
     const handleSearch = () => {
+        dateStartChosen = true
+        dateEndChosen = true
         dateStartSelected.setHours(0)
         dateStartSelected.setMinutes(0)
         dateStartSelected.setSeconds(0)
@@ -53,11 +55,11 @@
                             bind:dateChosen={dateStartChosen}
                             bind:selected={dateStartSelected}
                             end={dateEndSelected}>
-                    <button class="text-button">
+                    <button class="text-button" title='change start date'>
                         {#if dateStartChosen}
                             {dateStartFormatted}
                         {:else} 
-                            <span class='placeholder'>
+                            <span class='placeholder' >
                                 {defaultStartDate}
                             </span>
                         {/if}
@@ -69,7 +71,7 @@
                             bind:dateChosen={dateEndChosen} 
                             bind:selected={dateEndSelected}
                             start={dateStartSelected}>
-                    <button class="text-button">
+                    <button class="text-button" title='change end date'>
                         {#if dateEndChosen}
                             {dateEndFormatted}
                         {:else} 
@@ -131,6 +133,11 @@
         color: #D8D8D8;
     }
 
+    .placeholder:hover {
+        transition: color ease-in-out 200ms;
+        color:black;
+    }
+
     .text-button {
         display: inline;
         cursor: pointer;
@@ -139,6 +146,10 @@
         background-color: inherit;
         padding: 0;
         margin: 0;
+    }
+
+    :global(.text-button button > *) {
+        font-weight: bold;
     }
 
     :global(.text-button button) {
