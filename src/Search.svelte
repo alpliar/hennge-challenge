@@ -10,11 +10,14 @@
     let resultsCount = mails.length
     let userInput = ''
 
-    let dateStartChosen = true
-    let dateStartSelected = new Date('2019/12/31 00:00:00')
+    const defaultStartDate = '2019/12/31'
+    const defaultEndDate = '2020/01/03'
+
+    let dateStartChosen = false
+    let dateStartSelected = new Date(defaultStartDate + ' 00:00:00')
     let dateStartFormatted
-    let dateEndChosen = true
-    let dateEndSelected = new Date('2020/01/03 23:59:59')
+    let dateEndChosen = false
+    let dateEndSelected = new Date(defaultEndDate + ' 23:59:59')
     let dateEndFormatted
 
     //TODO: 
@@ -27,7 +30,7 @@
         dateEndSelected.setMinutes(59)
         dateEndSelected.setSeconds(59)
         dateEndSelected.setMilliseconds(999)
-        
+
         const filteredMails = mails.filter(mail => new Date(mail.date) >= dateStartSelected && new Date(mail.date) <= dateEndSelected)
         resultsCount = filteredMails.length
         dispatch('filter', filteredMails)
@@ -52,12 +55,14 @@
                     <button class="text-button">
                         {#if dateStartChosen}
                             {dateStartFormatted}
-                        <!-- {:else} 
-                            <span class='placeholder'>Pick a date</span>  -->
+                        {:else} 
+                            <span class='placeholder'>
+                                {defaultStartDate}
+                            </span>
                         {/if}
                     </button>
                 </Datepicker>
-                &nbsp;-&nbsp;
+                <span class={dateStartChosen && dateEndChosen ? '' : 'placeholder'}>&nbsp;-&nbsp;</span>
                 <Datepicker format={dateFormat} 
                             bind:formattedSelected={dateEndFormatted} 
                             bind:dateChosen={dateEndChosen} 
@@ -66,8 +71,10 @@
                     <button class="text-button">
                         {#if dateEndChosen}
                             {dateEndFormatted}
-                        <!-- {:else}
-                            <span class='placeholder'>Pick a date</span>  -->
+                        {:else} 
+                            <span class='placeholder'>
+                                {defaultEndDate}
+                            </span>
                         {/if}
                     </button>
                 </Datepicker>
@@ -119,28 +126,13 @@
         
     }
 
-    :global(div.datepicker) {
-        display: inline;
-        height: 1.5em;
-    }
-
     .placeholder {
         color: #D8D8D8;
     }
 
-    input {
-        border-radius: 0.5em 0em 0em 0.5em;
-        background: url(/images/icon_calender.svg) no-repeat scroll 7px 7px;
-        background-size: 1em 1em;
-        background-position-y: center;
-        background-position-x: 1em;
-        padding-left: 2.5em;
-        border-right: none;
-        border-color: #D0D0D0;
-    }
-
     .text-button {
         display: inline;
+        cursor: pointer;
         box-shadow: inherit;
         border: inherit;
         background-color: inherit;
