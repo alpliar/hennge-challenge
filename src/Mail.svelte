@@ -217,6 +217,7 @@
 
         .mail-container:hover {
             color: #0033DD;
+            background-color: #F6F8FA;
         }
 
         .mail-container:hover .when {
