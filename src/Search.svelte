@@ -51,7 +51,8 @@
                 <Datepicker format={dateFormat} 
                             bind:formattedSelected={dateStartFormatted} 
                             bind:dateChosen={dateStartChosen}
-                            bind:selected={dateStartSelected}>
+                            bind:selected={dateStartSelected}
+                            end={dateEndSelected}>
                     <button class="text-button">
                         {#if dateStartChosen}
                             {dateStartFormatted}
