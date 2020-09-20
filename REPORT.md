@@ -9,7 +9,7 @@ I have enjoyed the time spent to explore this technology, and was impressed by h
 
 ### Analysis
 
-Identified features : 
+First step, i've closely looked at mockups, and listed identified features:
 * Header 
     * Search input
         * from date
@@ -59,3 +59,8 @@ Identified features :
         * date
             * text in bold
             * hide decorative arrow
+
+### Mockup data
+I've decided to use dummy data directly into views since this demo is about frontend integration, not backend
+
+### 
