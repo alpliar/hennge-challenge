@@ -326,11 +326,7 @@
         .from.with-small-date.with-attachment {
             width: calc(100% - 3em - 1em);
         }
-
-        .from > div {
-            /* width: calc(100% - 2em); */
-        }
-
+        
         .to { 
             margin-top: 0.125em;
             position: relative;
