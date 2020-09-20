@@ -15,15 +15,17 @@ Identified features :
         * from date
         * end date
         * submit button
+        * code search
         * css
     * Search result count
         * fixed string
-        * dynamic count of results
+        * code dynamic count of results
         * css
 * Search results
     * Sorting options
-        * selected sorting
-        * other sortings
+        * display sortings
+        * code sortings
+        * specific style for selected sorting
         * sorting direction management (asc / desc)
     * Results
         * Mail Archiver logo when results count = 0
@@ -50,6 +52,7 @@ Identified features :
         * fixed width columns
         * hide separators
     * Search results
+        * background color / text color on hover
         * from / to container
             * hide from / to icon
             * remove bold on 'from'
