@@ -30,7 +30,7 @@
 
 <section>
     {#each sortings as sorting, key}
-        <button on:click={applySorting} aria-sort="{appliedSorting === sorting.title ? sortingDirection : undefined}" class={sorting.title}>{sorting.title}</button>
+        <button on:click={applySorting} role="columnheader" aria-sort="{appliedSorting === sorting.title ? sortingDirection : undefined}" class={sorting.title}>{sorting.title}</button>
         {#if key != sortings.length -1}
             <span>|</span>
         {/if}
