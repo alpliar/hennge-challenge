@@ -1,12 +1,14 @@
-*Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
+# Svelte App for Hennge challenge !
 
----
+This is my Svelte implementation of Hennge challenge !
 
-# svelte app for Hennge chalenge !
+The challenge consisted in implementing a responsive webmail interface from static mockups.
 
-This is a Svelte implementation of Hennge challenge !
+This was pretty challenging & interesting, because there were lots of tricky details hidden in mockups, that required meticulous analysis.
 
-Created using project template for [Svelte](https://svelte.dev) apps, which lives at https://github.com/sveltejs/template.
+## Live Demo
+
+https://hennge-challenge-alpliar.vercel.app/
 
 ## Get started
 
