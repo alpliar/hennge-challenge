@@ -133,7 +133,7 @@
 
 <Search mails={mails} on:filter={handleFilter} />
 
-<div class={displayedMails.length == 0 ? "emails-list" : ""}>
+<div role="table" class={displayedMails.length == 0 ? "emails-list" : ""}>
     {#if displayedMails.length > 0}
         <Sorting on:update={handleSorting} />
     {/if}

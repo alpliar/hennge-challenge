@@ -28,7 +28,7 @@
     }
 </script>
 
-<section>
+<section role="row">
     {#each sortings as sorting, key}
         <button on:click={applySorting} role="columnheader" aria-sort="{appliedSorting === sorting.title ? sortingDirection : undefined}" class={sorting.title}>{sorting.title}</button>
         {#if key != sortings.length -1}
