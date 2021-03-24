@@ -189,7 +189,7 @@
 
     .count-hidden-emails {
         color: white;
-        background-color: #888888;
+        background-color: #666;
         padding: 0 0.25em;
         border-radius: 0.25em;
         position: absolute;
